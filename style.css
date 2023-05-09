@@ -1,0 +1,266 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #ED4D1B;
+    --color-secundary:#FF9A3C;
+    --color-black:#000000;
+    --color-white:#ffffff;
+}
+
+body {
+    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E6 100%);
+    padding: 0 1rem;
+}
+
+
+/* Cabeçalho */
+
+header, .conteudo__principal, .conteudo__cursos, footer {
+    border-color: var(--color-black);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;
+}
+
+.Cabecalho__logo {
+    display: block;
+    margin: 1rem auto;
+
+}
+
+.Cabecalho__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-decoration: none;
+    
+}
+
+.Cabecalho__menu__item {
+    text-decoration: none;
+    color: var(--color-black);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    
+}
+
+.Cabecalho__menu__item:nth-child(2n-1) {
+    text-align: right;
+}
+
+.botao {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    box-shadow:  4px 4px 0 var(--color-black);
+    text-decoration: none;
+    border: 2px solid var(--color-black);
+    text-align: center;
+    display: block;
+    max-width: 14rem;
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+    margin: 1rem auto;
+}
+
+/* Conteúdo principal */
+
+.conteudo__principal {
+    padding-right: 0;
+    padding-bottom: 16rem;
+}
+
+.banner__principal {
+    display: block;
+    margin: 1.25rem 0 0 auto;
+    max-width: 100%;
+}
+
+.conteudo__titulo {
+    font-size: 3rem;
+    line-height: 105%;
+
+}
+
+.conteudo__titulo__2 {
+    font-size: 2.5rem;
+}
+
+span {
+    color: var(--color-primary)
+}
+
+.conteudo__paragrafo {
+    font-size: 1.25rem;
+    margin: 1.25rem;
+}
+
+.conteudo__principal .botao {
+    position: relative;
+}
+
+.conteudo__principal .botao::after {
+    content: '';
+    background: url(Imagens/arrow-curve.svg);
+    position: absolute;
+    top: 5rem;
+    height: 48px;
+    width: 100px;
+
+
+}
+
+
+/* Cards */
+
+.conteudo__cursos {
+    padding-bottom: 8rem;
+}
+
+.conteudo__cursos__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+    margin-top: -8rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    max-width: 17rem;
+    padding: 2rem 0 0 2rem;
+}
+
+.card:nth-child(2n) {
+    background-color: var(--color-secundary);
+    align-self: end;
+
+}
+
+.card strong {
+    display: block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+
+}
+
+.card a {
+    display: block;
+    margin: 3rem 0 0 auto;
+    width: fit-content;
+    
+}
+
+.conteudo__titulo__2 {
+    text-align: center;
+}
+
+
+/* Rodapé */
+
+.footer {
+    border-bottom: 0;
+    padding: 1rem 1.25rem 4rem;
+
+}
+
+.paragrafo__rodape {
+    margin: 1rem 0 1rem 0;
+}
+
+.rodape__menu {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.rodape__menu__item {
+    text-decoration: none;
+    margin: 0.25rem 0 0.25rem 0;
+    color: var(--color-black);
+}
+
+.newsletter__form {
+    padding: 1rem 0 1rem 0;
+}
+
+.newsletter__form label {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.newsletter__form input {
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    font-size: 1.5rem;
+    padding: .5rem;
+    width: 100%;
+}
+
+/* Responsividade */
+
+@media screen and (min-width: 40rem) {
+    .Cabecalho__menu {
+        display: block;
+        text-align: center;
+    }
+
+    .conteudo__cursos__cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card:nth-child(2n) {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+}
+
+@media screen and (min-width:78rem) {
+    .conteudo__principal {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .container__rodape {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .rodape__paragrafo {
+        flex: 2;
+
+    }
+
+    .rodape__menu {
+        flex: 2;
+    }
+
+    .newsletter__form {
+        flex: 3;
+    }
+    
+}
+
